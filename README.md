@@ -1,4 +1,4 @@
-**Project**
+**Description**
 
 There is a given some time series sales data including product, categories and stores. Main objective of this project is writing a python script that calculates the following features. 
 
@@ -45,19 +45,19 @@ sales.csv
 
 **Arguments**
 
-Your script should take following arguments from command line and process the data (inclusive) based on given date range.
+The script takes following arguments from command line and process the data (inclusive) based on given date range.
 - "--min-date": start of the date range. type:str, format:"YYYY-MM-DD", default:"2021-01-08"
 - "--max-date": end of the date range. type:str, format:"YYYY-MM-DD", default:"2021-05-30"
 - "--top": number of rows in the WMAPE output. type:int, default:5
 
 Expected command and output:
-- The first output should be sorted by product_id, brand_id, store_id, date in ascending order and contain all products.
-- The second output should be sorted by WMAPE in descending order and contain top N products given as --top argument.
+- The first output is sorted by product_id, brand_id, store_id, date in ascending order and contain all products.
+- The second output is sorted by WMAPE in descending order and contain top N products given as --top argument.
 
 ```
 $ python3 solution.py --min-date 2021-01-08 --max-date 2021-05-30 --top 5
 
---Output1 to be written to: features.csv--
+--Output1 is written to: features.csv--
 [product_id,store_id,brand_id,date,sales_product,MA7_P,LAG7_P,sales_brand,MA7_B,LAG7_B,sales_store,MA7_S,LAG7_S]
 ...
 ...
@@ -66,7 +66,7 @@ $ python3 solution.py --min-date 2021-01-08 --max-date 2021-05-30 --top 5
 ...
 ...
 
---Output2 to be written to: mapes.csv--
+--Output2 is written to: mapes.csv--
 [product_id,store_id,brand_id,WMAPE]
 1,0,0,0.708686
 3,2,0,0.630778
